@@ -1,6 +1,6 @@
-import WidgetHolder from './components/Widget/Widget-holder';
+import ClientHomePage from './components/ClientHomePage';
 
 export default async function Home() {
-  return <WidgetHolder />;
+  return <ClientHomePage />;
 }
 

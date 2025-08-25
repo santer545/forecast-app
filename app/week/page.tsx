@@ -1,7 +1,7 @@
-import WeeklyHolder from '../components/Weekly/Weekly-holder';
+import ClientWeeklyPage from '../components/ClientWeeklyPage';
 
 const WeeklyWeather = () => {
-  return <WeeklyHolder />;
+  return <ClientWeeklyPage />;
 };
 
 export default WeeklyWeather;

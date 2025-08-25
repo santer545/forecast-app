@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import MainMenu from './components/MainMenu/MainMenu';
 import Image from 'next/image';
-import MyMapComponent from './components/Map/Map';
+import ClientLayout from './components/ClientLayout';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -38,19 +38,12 @@ export default function RootLayout({
           {/* Main Content Grid */}
           <main className="container mx-auto px-4 py-8">
             <div className="grid lg:grid-cols-12 gap-6">
-              {/* Weather Content Area */}
+              {/* Weather Content Area - Server Components */}
               <div className="lg:col-span-8">{children}</div>
 
-              {/* Sidebar with Map */}
+              {/* Sidebar with Map - Client Component */}
               <aside className="lg:col-span-4">
-                <div className="sticky top-24">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-                    <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Location</h3>
-                    </div>
-                    <MyMapComponent />
-                  </div>
-                </div>
+                <ClientLayout />
               </aside>
             </div>
           </main>
